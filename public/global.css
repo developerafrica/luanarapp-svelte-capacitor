@@ -1,0 +1,155 @@
+.removeprd{
+  pointer-events: none;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+.remove{
+  display: none;
+  pointer-events: none;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+  font-size: 10px !important; 
+}
+
+.preloader .text{
+  position: fixed;
+  bottom: 0;
+  width: 100%; 
+  text-align: center;
+  
+ 
+}
+.preloader .text .txt p{
+  font-size: 15px;
+  padding: 15px 0;
+  border-bottom:rgba(46, 176, 52, 0.796) solid 1.1px;
+
+}
+.preloader .text .txt {
+  padding: 15px 15px 25px 15px;
+
+}
+
+.preloader{
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+  height: 100vh;
+}
+.rect1{
+  
+  position: absolute;
+  width: 350px;
+  height: 370px;
+  left: 17px;
+  top: 246px;
+}
+.rect2{
+  /* Rectangle 2 */
+  
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 87px;
+  top: 306px;
+  
+  background: rgba(46, 176, 53, 0.39);
+  border-radius: 100px;
+
+}
+
+.rect2 .image img{
+  position: absolute;
+  width: 45px;
+  transform: translate(-50%, 0);
+  top: 50%;
+  left: 50%;
+
+}
+.rect3{
+  
+  /* Rectangle 3 */
+  
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 240px;
+  top: 150px;
+  
+  background: rgba(46, 176, 53, 0.39);
+  border-radius: 100px;
+
+}
+.rect4{
+  /* Rectangle 5 */
+  
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 87px;
+  top: 276px;
+  
+  background: rgba(46, 176, 53, 0.39);
+  border-radius: 100px;
+
+}
+.rect5{
+
+  /* Rectangle 6 */
+  
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 157px;
+  top: 526px;
+  
+  background: rgba(46, 176, 53, 0.39);
+  border-radius: 100px;
+}
+.rect6{
+  
+  /* Rectangle 7 */
+  
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 250px;
+  top: 476px;
+  
+  background: rgba(46, 176, 53, 0.39);
+  border-radius: 100px;
+}
+.rect7{
+
+  /* Rectangle 4 */
+  
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 17px;
+  top: 516px;
+  
+  background: rgba(46, 176, 53, 0.39);
+  border-radius: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

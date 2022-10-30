@@ -1,0 +1,40 @@
+
+
+/* Variables and mixins declared here will be available in all other SCSS files */
+:root{
+    //colors
+    --gn: hsl(123, 59%, 44%);
+    --l-gn: #CFEDD1;
+    --tc: black;
+    --yw: #EAD413;
+    --bl: hsl(208, 96%, 57%);
+    --btn-bl: hsla(208, 96%, 47%, 0.686);
+    --flair-bl: hsla(208, 96%, 57%, 0.99);
+    --l-bl: hsl(207, 38%, 94%);
+    //bgs
+    --bg: white;
+    --wc: white;
+    --nv: hsl(208, 56%, 57%);
+    //svg
+    --svg: white;
+    //indexes
+    --z1: 100; // preload screen
+    --z2: 95; // navigation
+    --z3: 80; // time card
+    --z4: 70; // add btn
+    //menu
+    --mn-cd: white;
+    --abt-txt: hsl(208, 96%, 37%);
+    --rmd-cd: white;
+
+}
+@mixin font($c,$s,$w) {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color:$c;
+    font-size: $s;
+    font-weight: $w;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
