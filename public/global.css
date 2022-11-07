@@ -11,6 +11,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    outline: none;
 }
 
 html, body{
@@ -28,7 +29,7 @@ html, body{
 .preloader .text .txt p{
   font-size: 15px;
   padding: 15px 0;
-  border-bottom:rgba(46, 176, 52, 0.796) solid 1.1px;
+
 
 }
 .preloader .text .txt {
@@ -44,112 +45,34 @@ html, body{
   left: 0;
   background: white;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
 }
-.rect1{
-  
-  position: absolute;
-  width: 350px;
-  height: 370px;
-  left: 17px;
-  top: 246px;
-}
+
 .rect2{
   /* Rectangle 2 */
   
-  position: absolute;
+  position: relative;
   width: 200px;
   height: 200px;
-  left: 87px;
-  top: 306px;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center; 
   background: rgba(46, 176, 53, 0.39);
   border-radius: 100px;
 
 }
-
+.rect2 .image{
+  display: grid;
+  place-items: center
+}
 .rect2 .image img{
-  position: absolute;
+  position: relative;
   width: 45px;
-  transform: translate(-50%, 0);
-  top: 50%;
-  left: 50%;
+  
+ 
+ 
 
 }
-.rect3{
-  
-  /* Rectangle 3 */
-  
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  left: 240px;
-  top: 150px;
-  
-  background: rgba(46, 176, 53, 0.39);
-  border-radius: 100px;
-
-}
-.rect4{
-  /* Rectangle 5 */
-  
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  left: 87px;
-  top: 276px;
-  
-  background: rgba(46, 176, 53, 0.39);
-  border-radius: 100px;
-
-}
-.rect5{
-
-  /* Rectangle 6 */
-  
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 157px;
-  top: 526px;
-  
-  background: rgba(46, 176, 53, 0.39);
-  border-radius: 100px;
-}
-.rect6{
-  
-  /* Rectangle 7 */
-  
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 250px;
-  top: 476px;
-  
-  background: rgba(46, 176, 53, 0.39);
-  border-radius: 100px;
-}
-.rect7{
-
-  /* Rectangle 4 */
-  
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  left: 17px;
-  top: 516px;
-  
-  background: rgba(46, 176, 53, 0.39);
-  border-radius: 100px;
-}
-
-
-
-
-
-
-
-
-
-
-
-

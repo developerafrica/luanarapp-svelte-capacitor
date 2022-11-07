@@ -35,13 +35,8 @@
                             <div class="main">
                 
                                 <ul>
-                                    <li><h1>APP INFO</h1></li>
-                                    <hr>
-                                    <li><a class="tos" href="/TOS.html">Licence &hookrightarrow;</a></li>
-                                </ul>
-                                <ul>
-                                    <li><h1>DEV</h1></li>
-                                    <hr>
+                                    <br>
+                                    
                                     <p class="notfy"> get in touch with the development team &hookrightarrow;</p>
                                     <div class="cd">
 
@@ -56,12 +51,17 @@
                                 </ul>
                                 <ul>
                                     <li><h1>READ ME</h1></li>
-                                    <hr>
+                                    
                                     <li class="inst-msg">
                                         {#each message as dt}
                                         <p class="instruct">{@html dt.messages}</p>
                                         {/each}
                                     </li>
+                                </ul>
+                                <ul>
+                                    <li><h1>APP INFO</h1></li>
+                                
+                                    <li><a class="tos" href="/TOS.html">Licence &hookrightarrow;</a></li>
                                 </ul>
                 
                             </div>

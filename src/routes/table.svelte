@@ -183,36 +183,22 @@
                     
                 </tr>
                 <tr>
-                    <td class="h20">___</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                   
+                    <td class="h19">7 : 00</td>
+                    <td class="mo19">{datarow("19:00",1)}</td>
+                    <td class="tu19">{datarow("19:00",2)}</td>
+                    <td class="we19">{datarow("19:00",3)}</td>
+                    <td class="th19">{datarow("19:00",4)}</td>
+                    <td class="fr19">{datarow("19:00",5)}</td>
                     
                 </tr>
-                <!--
-
                 <tr>
                     <td class="h20">8 : 00</td>
-                    <td class="mo20">{readrow("20:00",1)}</td>
-                    <td class="tu20">{readrow("20:00",2)}</td>
-                    <td class="we20">{readrow("20:00",3)}</td>
-                    <td class="th20">{readrow("20:00",4)}</td>
-                    <td class="fr20">{readrow("20:00",5)}</td>
-                  
-                </tr>
-            -->
-
-                <tr>
-                    <td class="h20">8 : 00</td>
-                    <td class="mo20"></td>
-                    <td class="tu20"></td>
-                    <td class="we20"></td>
-                    <td class="th20"></td>
-                    <td class="fr20"></td>
-                  
+                    <td class="mo20">{datarow("20:00",1)}</td>
+                    <td class="tu20">{datarow("20:00",2)}</td>
+                    <td class="we20">{datarow("20:00",3)}</td>
+                    <td class="th20">{datarow("20:00",4)}</td>
+                    <td class="fr20">{datarow("20:00",5)}</td>
+                    
                 </tr>
                 
                 

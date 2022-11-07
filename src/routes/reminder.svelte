@@ -42,8 +42,8 @@
     function submit(e){
 
 
-        st = (st == "") ? "unset time" : st
-        lc = (lc == "") ? "unset location" : lc
+        st = (st == "") ? "00:00 unset" : st
+        lc = (lc == "") ? "_ unset" : lc
         fl = (fl == "") ? "other" : fl
         
         let color = `hsl(${Math.floor(Math.random() * 9)}${Math.floor(Math.random() * 9)}, 100%, 65%)`
@@ -75,6 +75,7 @@
             sucess = true
             setTimeout(()=>{
                 sucess = false
+                toggle =  !toggle
             },2500)
             
         };
@@ -126,7 +127,7 @@
                                     {dt.title}
                                 </h1>
                                 <div class:shift={collapse} class="flair">
-                                    <p style="background: {dt.color};">
+                                    <p style="border: solid 1.2px {dt.color};">
                                         {dt.flair}
                                     </p>
                                 </div>
@@ -135,8 +136,9 @@
                         {#if !collapse}
                         <main>
                             <div class="mn">
+                                <div class="flex">
                                 <div class="date">
-                                    <p>{dt.date}</p>
+                                    <p>created : {dt.date}</p>
                                 </div>
                                 <div class="location">
                                     <p>{dt.location}</p>
@@ -144,9 +146,10 @@
                                 <div class="time">
                                     <p>{dt.startTime}</p>
                                 </div>
+                                </div>
                                 <div class="note">
                                     <div class="nts">
-                                        <p>&xrarr; {dt.notes}</p>
+                                        <p>{dt.notes}</p>
                                         
                                     </div>
                                 </div>
@@ -155,7 +158,18 @@
                         {/if}
                         <footer>
                             <div class="ft">
-                                <button on:click={dispatchdel(dt.id)}>DELETE</button>
+                                <button on:click={dispatchdel(dt.id)}>
+                                    <i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <g data-name="Layer 2">
+                                                <g data-name="trash-2">
+                                                    <rect width="24" height="24" opacity="0"/>
+                                                    <path d="M21 6h-5V4.33A2.42 2.42 0 0 0 13.5 2h-3A2.42 2.42 0 0 0 8 4.33V6H3a1 1 0 0 0 0 2h1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8h1a1 1 0 0 0 0-2zM10 16a1 1 0 0 1-2 0v-4a1 1 0 0 1 2 0zm0-11.67c0-.16.21-.33.5-.33h3c.29 0 .5.17.5.33V6h-4zM16 16a1 1 0 0 1-2 0v-4a1 1 0 0 1 2 0z"/>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                      </i>
+                                </button>
                             </div>
                         </footer>
                     </div>
@@ -222,11 +236,11 @@
                             <div class="mn-formg">
                                 <div class="fm-grp">
                                     <label for="title">TITLE</label>
-                                    <input bind:value={ti} type="text" name="title" placeholder="enter title">
+                                    <input bind:value={ti} type="text" class:redin={error} name="title" placeholder="enter title">
                                 </div>
                                 <div class="fm-grp">
                                     <label for="starttime">START TIME</label>
-                                    <input  bind:value={st} type="text" name="start time" placeholder="00:00">
+                                    <input  bind:value={st} type="time" name="start time" >
                                 </div>
                                 <div class="fm-grp">
                                     <label for="laction">LOCATION</label>
@@ -279,6 +293,10 @@
         text-align: end;
         transition: all 1s ease-in-out;
     }
+    .redin{
+
+        border: red solid 1px !important;
+    }
     .reminder-section{
         .art-rmdsect{
             .cards-view{
@@ -309,29 +327,36 @@
                         box-shadow: rgba(0, 0, 0, 0.272) 1px 4px 4px 3px;
                     
                         .cd{
-                            padding: 1rem;
+                            padding: 0.1rem 2rem 0 0.5rem;
                             margin: 2rem 0;
                             header{
                                 .hd{
                                     h1{
-                                        @include font(var(--tc), 1.5rem, 500);
+                                        @include font(var(--tc), 1.45rem, 500);
                                         padding: 1rem 0;
                                         text-transform: uppercase;
                                     }
                                    
                                     p{
                                         
-                                        @include font(black, 1.2rem, 500);
-                                        border-radius: 4rem;
-                                        padding: 0.3rem 1rem;
+                                        @include font(var(--tc), 1.19rem, 500);
+                                        border-radius: 5px;
+                                        padding: 0.25rem 1rem;
                                         display:inline;
                                        
                                         
                                     }
-                                }
+                                }   
                             }
                             main{
                                 .mn{
+                                    .flex{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        padding: 5px 0;
+                                        margin: 5px 0;
+
+                                    }
                                     .date,
                                     .location,
                                     .time{
@@ -361,9 +386,13 @@
                                         background: var(--btn-bl);
                                         letter-spacing: 1px;
                                         border: none;
-                                        padding: 1rem 2rem;
-                                        border-radius: 5px;
+                                        padding: 0.5rem 1rem;
+                                        border-radius: 4px;
                                         box-shadow: rgba(0, 0, 0, 0.219) 0 4px 4px 0;
+                                        svg{
+                                            width: 30px;
+                                            fill: #fff !important;
+                                        }
                                     }
                                 }
                             }

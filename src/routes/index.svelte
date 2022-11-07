@@ -71,7 +71,7 @@
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"><defs><clipPath id="a"><rect width="16" height="16" fill="none"/></clipPath></defs><g clip-path="url(#a)"><path d="M8,0a8,8,0,1,0,8,8A8.024,8.024,0,0,0,8,0ZM9.1,12.2H6.9V10.3H9.2v1.9Zm.1-7.4L8.6,9.2H7.4L6.8,4.8v-1H9.3v1Z" fill="#707070"/></g></svg>
                                             </div>
                                             <div class="txt">
-                                                <p>prepare for monday next week</p>
+                                                <p>prepare for MONDAY COURSES</p>
                                             </div>
                                             {#each monday as crs}                                       
                         
@@ -83,10 +83,10 @@
                                                             <span>{crs.course}</span>
                                                         </h1>
                                                     </div>
-                                                    <div class="cd-lw-txt">
+                                                    <!-- <div class="cd-lw-txt">
                                                         {#each crs.weekdays as rc}
                                                        
-                                                        <hr>
+                                                        <hr>st
                                                         <table>
                                                             <tbody>
                                                                 <tr>
@@ -100,7 +100,7 @@
                                                             </tbody>
                                                         </table>
                                                         {/each}
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </article>
                                             {/each}

@@ -12,10 +12,18 @@
 </script>
 <article class="intro-section">
     <article class="ints">
+        
+        <header>
+            <div class="hd">
+                <button on:click={()=>{dispatch("acceptcontEvent",true)}} >skip</button>
+            </div>
+        </header>
         <main>
-            <Carousel>
+            <Carousel
+                $: on:pageChange={(e)=>{console.log(e)}}
+            >
 
-                <div class="mn-one">
+            <div class="mn-one">
                     <div class="upper-txt">
                         <h1>WELCOME TO LUANAR APP</h1>
                     </div>
@@ -50,11 +58,13 @@
             
         </main>
         <p class="dots" style="color:white;text-align: center;font-size: 2.5rem"><span>.</span><span>.</span></p>
+        
         <footer>
             <div class="ft">
                 <button on:click={()=>{dispatch("acceptcontEvent",true)}} >Accept & Continue</button>
             </div>
         </footer>
+
     </article>
 </article>
 
@@ -69,15 +79,33 @@
         z-index: 99;
         background: var(--bg);
         .ints{
-            min-height:100vh;
+            
             display: flex;
             flex-direction: column;
+            header{
+                .hd{
+                    padding: 2rem;
+                    text-align: end;
+                    button{
+                        background:  none;
+                        padding: 0.7rem 2rem;
+                        @include font(var(--tc), 1.25rem, 505);
+                        border-radius: 4rem;
+                        background: var(--yw);
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        border: none;
+                        box-shadow: rgba(0, 0, 0, 0.19) 0 4px 4px 0;
+                    }
+
+                }
+            }
             main{
                 flex:1;
                 display:flex;
                 .mn-one{
                     height: 100%; 
-                    padding-top: 5vh;
+                    padding-top: 1vh;
                     text-align: center;
                     .upper-txt{
                         h1{
@@ -97,7 +125,7 @@
                     
                 }
                 .mn-two{
-                    padding-top: 10vh;
+                    padding-top: 1vh;
                     height: 100%; 
                     .paragraphs{
 

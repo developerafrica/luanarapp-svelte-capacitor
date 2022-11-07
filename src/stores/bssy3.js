@@ -11,8 +11,8 @@ let ads = [], message = [], reads =[]
 
 
 //parameters
-let programmeName = "BAGR";
-let yearNumber = 4;
+let programmeName = "BSSY";
+let yearNumber = 3;
 let semesterNumber = 1;
 let versionNumber = "1.1.1";
 let siteName = "https://butaopeter.netlify.app";
@@ -73,59 +73,52 @@ class CourseObj {
 
 const courses = [
     //monday
-    new CourseObj("HYDROLOGY AND AGRO-METEOROLOGY","IRE311","NON CORE",3.0,
+    new CourseObj("GROUP DYNAMICS","EXT314","CORE",3.0,
         [
-            new WeekdayObj("Monday",1, "07", "08", "ROOM 2", "LECTURE"),
-            new WeekdayObj("Monday",1, "10", "12", "LT 2", "LECTURE"),
-            
+            new WeekdayObj("Monday",1, "10", "12", "HALL", "LECTURE")
             
         ] 
     ),
-    new CourseObj("AGRONOMY OF INDUSTRIAL CROPS","AGN413","CORE",3.0,
+    new CourseObj("DESIGN AND ANALYSIS OF EXPERIMENTS","BSC311","NON CORE",3.0,
         [
-            new WeekdayObj("Monday",1, "14", "16", "LT 2", "LECTURE"),
-            new WeekdayObj("Tuesday",2, "10", "12", "LAB / FIELD", "PRACTICAL")
-           
+            new WeekdayObj("Monday",1, "17", "19", "MPH", "LECTURE"),
+            new WeekdayObj("Friday",5, "16", "18", "MPH", "TUTORIAL")
             
         ] 
-        ),
-    //TUESDAY//
-    new CourseObj("MUSHROOM PRODUCTION TECHNOLOGY","HOR313","NON CORE",3.0,
+    ),
+    new CourseObj("FARM BUSINESS MANAGEMENT","AAE314","NON CORE",2.0,
         [
-
-            new WeekdayObj("Tuesday",2, "09", "10", "LT 5", "LECTURE"),
-            new WeekdayObj("Wednesday", 3, "13", "15", "PLANT LAB ", "PRACTICAL"),
-            new WeekdayObj("Thursday",4, "09", "10", "LT 6", "LECTURE")
+            new WeekdayObj("Tuesday",2, "11", "12", "CALT 2", "TUTORIAL"),
+            new WeekdayObj("Thursday",4, "08", "10", "CALT 2", "LECTURE")
             
         ] 
     ),
 
-    new CourseObj("RUMINANT PRODUCTION","ANS418","NON CORE",3.5,
+    //tuesday
+    new CourseObj("SOIL CHEMISTRY AND FERTILITY","SSC312","CORE",3.0,
         [
-            new WeekdayObj("Tuesday",2, "13", "14", "LT 6", "LECTURE"),
-            new WeekdayObj("Wednesday", 3, "12", "13", "LT 6", "LECTURE"),
-            new WeekdayObj("Friday",5, "13", "15", "ANS LAB", "PRACTICAL")
+            new WeekdayObj("Tuesday",2, "13", "15", "SOIL LAB", "PRACTICAL"),
+            new WeekdayObj("Wednesday",3, "11", "13", "CALT 2", "LECTURE")
             
         ] 
     ),
-    //WEDNESDAY
-    new CourseObj("ENTREPRENEURSHIP 1","ABM213","CORE",2.5,
-        [
 
-            new WeekdayObj("Wednesday", 3, "18", "20", "MPH ", "LECTURE"),
-            new WeekdayObj("Thursday",4, "19", "20", "MPH", "LECTURE")
-            
-        ] 
-    ),
-    //
+
     //thursday
-    new CourseObj("AGRICULTURAL ENTOMOLOGY","AGN416","CORE",2.5,
+    new CourseObj("POST HARVEST SEED MANAGEMENT","SSY411","CORE",3.0,
         [
-            new WeekdayObj("Wednesday", 3, "11", "12", "LT 3", "TUTORIAL"),
-            new WeekdayObj("Thursday", 4, "10", "12", "LT 2", "LECTURE")
+            new WeekdayObj("Thursday", 4, "10", "12", "ROOM 1", "tutorial"),
+            new WeekdayObj("Friday", 5, "14", "18", "LT 1", "lecture")
             
         ] 
-    )
+    ),
+    new CourseObj("POST HARVEST SEED MANAGEMENT","SSY411","CORE",3.0,
+        [
+            new WeekdayObj("Thursday", 4, "10", "12", "ROOM 1", "tutorial"),
+            new WeekdayObj("Friday", 5, "14", "18", "LT 1", "lecture")
+            
+        ] 
+    ),
 
 ]
 
